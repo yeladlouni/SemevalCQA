@@ -106,7 +106,7 @@ for qid in processed_qaquestion.keys():
     #vec_lsi = model[vec_bow]
     vec_lsi = lsi[vec_bow]
 
-    index = similarities.MatrixSimilarity(lda[corpus])
+    index = similarities.MatrixSimilarity(lsi[corpus])
     index.save('data/qaquestions/'+qid+'.index')
     
     sims[qid] = index[vec_lda]
